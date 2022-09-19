@@ -65,6 +65,18 @@ public class PlayerTest {
     }
 
     @Test
+    public void repitInstallationGame() {
+
+        Player player = new Player("Petya");
+        player.installGame(game);
+        player.play(game, 3);
+        player.installGame(game);
+        int expected = 3;
+        int actual = player.sumGenre(game.getGenre());
+        assertEquals(expected, actual);
+    }
+
+    @Test
     public void shouldSumGenreZero() {
         Player player = new Player("Petya");
         player.installGame(game);
@@ -102,6 +114,19 @@ public class PlayerTest {
         player.play(game3, 10);
         Game expected = null;
         Game actual = player.mostPlayerByGenre("Аркады");
+        assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void shouldCheckPlayToSumHoursSameGenreGames() {
+        Player player = new Player("Petya");
+        player.installGame(game);
+        player.installGame(game2);
+        player.play(game, 3);
+        player.play(game2, 5);
+        int expected = 8;
+        int actual = player.sumGenre("Аркады");
         assertEquals(expected, actual);
     }
 }
