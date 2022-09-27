@@ -86,7 +86,7 @@ public class GameStoreTest {
     }
 
     @Test
-    public void shouldGetMostPlayerEquallyOne() { //должен получить большинство игроков ровно один
+    public void shouldGetMostPlayerEquallyOne() { //должен получить большинствоигроков ровно один
 
         GameStore store = new GameStore();
 
