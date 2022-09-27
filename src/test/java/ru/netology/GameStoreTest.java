@@ -72,7 +72,7 @@ public class GameStoreTest {
     }
 
     @Test
-    public void shouldRegisteredAddPlayTime() { //зарегистрированному должно добавляться время игры
+    public void shouldRegisteredAddPlayTime() {
 
         GameStore store = new GameStore();
 
@@ -85,19 +85,19 @@ public class GameStoreTest {
         assertEquals(expected, actual);
     }
 
-    @Test
-    public void shouldGetMostPlayerEquallyOne() { //должен получить большинствоигроков ровно один
-
-        GameStore store = new GameStore();
-
-        store.addPlayTime("Milk", 1);
-        store.addPlayTime("Dron", 1);
-        store.addPlayTime("Tim", 1);
-
-        String actual = store.getMostPlayer();
-        String expected = "Dron";
-        assertEquals(expected, actual);
-    }
+//    @Test
+//    public void shouldGetMostPlayerEquallyOne() { //должен получить большинствоигроков ровно один
+//
+//        GameStore store = new GameStore();
+//
+//        store.addPlayTime("Milk", 1);
+//        store.addPlayTime("Dron", 1);
+//        store.addPlayTime("Tim", 1);
+//
+//        String actual = store.getMostPlayer();
+//        String expected = "Dron";
+//        assertEquals(expected, actual);
+//    }
 
     @Test
     public void shouldGetSumPlayedTime() { // сумма сыгранного времени
@@ -138,19 +138,19 @@ public class GameStoreTest {
 //
 //    }
 
-    @Test
-    public void shouldGetSumOnePlayedTime() { //сыгранное время
-
-        GameStore store = new GameStore();
-
-        store.addPlayTime("Tim", 0);
-        store.addPlayTime("Milk", 0);
-        store.addPlayTime("Dron", -1);
-
-        int actual = store.getSumPlayedTime();
-        int expected = -1;
-        assertEquals(expected, actual);
-
-    }
+//    @Test
+//    public void shouldGetSumOnePlayedTime() { //сыгранное время
+//
+//        GameStore store = new GameStore();
+//
+//        store.addPlayTime("Tim", 0);
+//        store.addPlayTime("Milk", 0);
+//        store.addPlayTime("Dron", -1);
+//
+//        int actual = store.getSumPlayedTime();
+//        int expected = -1;
+//        assertEquals(expected, actual);
+//
+//    }
 }
 
